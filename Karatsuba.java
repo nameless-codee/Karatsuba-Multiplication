@@ -15,7 +15,7 @@ public class Karatsuba {
     }
 
     public static long multiply(long x, long y) {
-        // Base case: single digit multiplication
+        // Base case (Stopping condition): single digit multiplication
         if (x < 10 && y < 10) {
             return x * y;
         }
@@ -33,7 +33,7 @@ public class Karatsuba {
         long c = y / powerOf10;
         long d = y % powerOf10;
 
-        // Recursive steps - The function calls itself
+        // Recursive steps (The function calls itself)
         long ac = multiply(a, c);
         long bd = multiply(b, d);
         long pq = multiply(a + b, c + d);
