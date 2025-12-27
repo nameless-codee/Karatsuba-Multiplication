@@ -33,7 +33,7 @@ public class Karatsuba {
         long c = y / powerOf10;
         long d = y % powerOf10;
 
-        // Recursive steps
+        // Recursive steps - The function calls itself
         long ac = multiply(a, c);
         long bd = multiply(b, d);
         long pq = multiply(a + b, c + d);
